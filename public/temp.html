@@ -1,0 +1,19 @@
+<div class="thumb" data-user="'.$username.'">
+    <div class="profile-pic">
+        <a target="_blank" href="'.$ig_base.'/_u/'.$username.'/">
+            <img class="profile-pic-img" src="'.$user['profile_pic_url'].'" alt="'.$username.'">
+        </a>
+    </div>
+    <div class="opt">
+        <ul>
+            <li><a href="#edit">Edit</a></li>
+            <li><a href="#remove">Remove</a></li>
+        </ul>
+    </div>
+    <p class="username">
+        <a href="'.$ig_base.'/_u/'.$username.'/" target="_blank">@'.$username.'</a>
+    </p>
+    <p class="posts-count">'.$user['media']['count'].' posts</p>
+    <p class="name">'.$user['name'].'</p>
+    <p class="bio">'.$user['biography'].'</p>
+</div>';

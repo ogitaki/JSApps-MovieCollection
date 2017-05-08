@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./scripts/node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Movie Library</title>
+</head>
+
+<body>
+    <main>
+        <nav id="navigation" class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#home">My Movie Collection</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li id="go-to-home">
+                        <a href="/">
+                            <span class="glyphicon glyphicon-home"></span> Home</a>
+                    </li>
+                    <li id="go-to-watchlist" class="hidden visible-when-logged">
+                        <a href="#watchlist"> <span class="glyphicon glyphicon-book"></span> Watchlist</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="go-to-register" class="hidden visible-when-logged-out">
+                        <a href="#register"><span class="glyphicon glyphicon-user"></span> Register</a>
+                    </li>
+                    <li id="go-to-login" class="hidden visible-when-logged-out">
+                        <a href="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                    <li class="hidden visible-when-logged" id="username-display">
+                        <a href="#watchlist"></a>
+                    </li>
+                    <li id="btn-logout" class="hidden visible-when-logged">
+                        <a href=""><span class="glyphicon glyphicon-off"></span> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content">
+
+        </div>
+    </main>
+    <script src="./scripts/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./scripts/node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="./scripts/node_modules/systemjs/dist/system.js"></script>
+    <script src="./scripts/systemjsconfig.js"></script>
+    <script src="./scripts/node_modules/sammy/lib/sammy.js"></script>
+    <script src="./scripts/node_modules/crypto-js/crypto-js.js"></script>
+    <script>
+        System.import('main');
+    </script>
+
+</body>
+
+</html>

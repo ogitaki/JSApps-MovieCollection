@@ -1,0 +1,35 @@
+<form id="register-form" class="form-horizontal" action="/register" method="POST">
+    <fieldset>
+        <legend>
+            <h3>Register</h3>
+        </legend>
+
+        <div class="form-group">
+            <label for="input-username" class="col-md-1 control-label">Username</label>
+            <div class="col-md-10">
+                <input class="form-control" id="input-username" placeholder="Username" type="text" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-password" class="col-md-1 control-label">Password</label>
+            <div class="col-md-10">
+                <input class="form-control" id="input-password" placeholder="Password" type="password" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="input-password-repeat" class="col-md-1 control-label">Confirm Password</label>
+            <div class="col-md-10">
+                <input class="form-control" id="input-password-repeat" placeholder="Password" type="password" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-4 col-sm-offset-1">
+                <button type="reset" class="btn btn-default">Clear</button>
+                <input type="submit" id="btn-register" class="btn btn-primary" value="Register" />
+            </div>
+        </div>
+    </fieldset>
+</form>

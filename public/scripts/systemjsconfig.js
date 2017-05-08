@@ -7,6 +7,7 @@ SystemJS.config({
         'data': './scripts/data.js',
         'search': './scripts/search-controller.js',
         'register': './scripts/register-controller.js',
-        'login': './scripts/login-controller.js'
+        'login': './scripts/login-controller.js',
+        'watchlist': './scripts/watchlist-controller.js'
     }
 });

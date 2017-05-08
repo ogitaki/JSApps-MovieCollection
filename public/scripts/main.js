@@ -1,6 +1,7 @@
 import { search } from 'search';
 import { register } from 'register';
 import { login } from 'login';
+import { watchlist } from 'watchlist';
 
 new Sammy(function () {
     this.before(function (context) {
@@ -26,6 +27,7 @@ new Sammy(function () {
     this.get('#home', search);
     this.get('#login', login);
     this.get('#register', register);
+    this.get('#watchlist', watchlist);
     this.post('', function () {
         //Fix sammy errors
     });

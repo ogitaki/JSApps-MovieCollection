@@ -43,7 +43,7 @@ var search = function () {
             passHash: passHash,
             movieID: id
         }, function (data) {
-            console.log(data);
+            alert(data);
         })
 
     })

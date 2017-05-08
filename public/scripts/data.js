@@ -30,6 +30,14 @@ function processResponse(ids) {
 var lastResp;
 
 var data = {
+    getMoviesById: function (ids) {
+        if (!(ids instanceof Array)) {
+            return;
+        }
+        return new Promise((resolve, reject) => {
+            Promise.all(processResponse(ids)).then(resolve);
+        })
+    },
     getMovies: function (keyWord) {
         return new Promise((resolve, reject) => {
             var movies;

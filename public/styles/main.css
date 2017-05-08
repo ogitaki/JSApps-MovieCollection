@@ -19,7 +19,9 @@ a:hover {
 .hidden { 
 	display: none;
 }
-
+.error-message{
+	text-align: center;
+}
 	#content{
 		width: 95%;
 	}

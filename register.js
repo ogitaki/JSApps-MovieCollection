@@ -21,11 +21,17 @@ var register = function (req, res) {
         return;
     }
 
+    const folderExists = fs.existsSync('./users/');
+    if (!folderExists) {
+        fs.mkdirSync('./users');
+    }
+
     fs.writeFileSync('./users/' + username + '.json', JSON.stringify({
         username: username,
         passwordHash: passwordHash,
         movies: []
     }));
+
     res.send('Successfully registered');
 };
 

@@ -19,6 +19,10 @@ body {
 		width: 95%;
 }
 
+.search{
+	position: absolute;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 1300px;

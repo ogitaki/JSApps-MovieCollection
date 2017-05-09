@@ -45,8 +45,8 @@ var search = function () {
         }, function (data) {
             alert(data);
         })
+    });
 
-    })
 }
 
 export { search };

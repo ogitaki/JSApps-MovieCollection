@@ -1,6 +1,6 @@
 import { data } from 'data';
 
-var watchlist = function () {
+var watchlist = function (context) {
     var $thumbs = $('<div class="thumbs container"></div>');
 
     $('#content')
@@ -28,6 +28,25 @@ var watchlist = function () {
                 }));
             });
     })
+
+    $thumbs.on('click', '.remove-movie', function (e) {
+        const id = $(e.target).data('id');
+        const user = localStorage.getItem('username');
+        const passHash = localStorage.getItem('passHash');
+        var element = $(this).parent('.thumb');
+
+        $.post('/remove-movie', {
+            username: user,
+            passHash: passHash,
+            movieID: id
+        }, function (returnData) {
+            alert(returnData);
+            if (returnData.indexOf('Movie removed') < 0) {
+                return;
+            }
+            element.remove();
+        })
+    });
 }
 
 export { watchlist };

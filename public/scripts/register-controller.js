@@ -7,13 +7,13 @@ var register = function (context) {
             e.preventDefault();
             const username = $('#input-username').val();
             const pass = $('#input-password').val();
-            const hashPass = CryptoJS.SHA256(pass).toString();
+            const passHash = CryptoJS.SHA256(pass).toString();
             const confPass = $('#input-password-repeat').val();
-            const confHashPass = CryptoJS.SHA256(confPass).toString();
+            const confPassHash = CryptoJS.SHA256(confPass).toString();
             $.post('/register', {
                 username: username,
-                password: hashPass,
-                confirmedPassword: confHashPass
+                passHash: passHash,
+                confPassHash: confPassHash
             }, function (data, status) {
                 alert(data);
                 if (data.indexOf('Successfully') > -1) {

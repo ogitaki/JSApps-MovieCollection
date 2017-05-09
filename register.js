@@ -2,8 +2,8 @@ const fs = require('fs');
 
 var register = function (req, res) {
     const username = req.body.username;
-    const passwordHash = req.body.password;
-    const confirmedPasswordHash = req.body.confirmedPassword;
+    const passwordHash = req.body.passHash;
+    const confirmedPasswordHash = req.body.confPassHash;
 
     if (!(/^[a-zA-Z0-9]{3,13}$/.test(username))) {
         res.send('Invalid username');

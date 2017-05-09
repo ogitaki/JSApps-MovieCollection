@@ -15,14 +15,15 @@ body {
 .error-message {
 	text-align: center;
 }
-#content {
-		width: 95%;
-}
 
 .search{
 	position: absolute;
 }
 
+#page-title{
+	font-family: Oswald;
+	text-align: center;
+}
 .container {
 	margin: 0 auto;
 	max-width: 1300px;

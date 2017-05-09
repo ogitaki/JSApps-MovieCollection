@@ -21,7 +21,7 @@ var removeMovie = function (req, res) {
 
     const movieID = req.body.movieID;
 
-    var movie = ser.movies.find(x => x === movieID);
+    var movie = user.movies.find(x => x === movieID);
 
     if (!movie) {
         res.send('Movie missing from watchlist, try again.');
